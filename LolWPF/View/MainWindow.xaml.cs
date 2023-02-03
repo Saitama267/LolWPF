@@ -1,4 +1,5 @@
 ﻿using LolWPF.Controller;
+using LolWPF.View;
 using LolWPF.View.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,9 @@ namespace LolWPF
             }
             if (controller.GetSummoner(viewModel.Region,viewModel.SummonerName))
             {
-                MessageBox.Show("OK");
+                WindowProfile profile = new WindowProfile();
+                profile.ShowDialog();
+                this.Close();
             }
             else
             {
