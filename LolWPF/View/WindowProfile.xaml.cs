@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LolWPF.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace LolWPF.View
     /// </summary>
     public partial class WindowProfile : Window
     {
+        ControllerProfile controller;
         public WindowProfile()
         {
             InitializeComponent();
+            controller = new ControllerProfile();
+            this.DataContext = controller.GetContext();
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LolWPF.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace LolWPF.View.ViewModel
         public string Region
         {
             get { return region; }
-            set { region = value; NotifyPropertyChanged ("Region"); }
+            set { region = value; Constants.Region = value; NotifyPropertyChanged ("Region"); }
         }
 
         string summonerName;
