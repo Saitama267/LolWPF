@@ -20,13 +20,13 @@ namespace LolWPF.View.ViewModel
         public ViewModelProfile(string summonerName, int icon, long level, string tier, string rank, int wins, int  losses)
         {
             SummonerName = summonerName;
-            Icon = "http://ddragon.leagueoflegends.com/cdn/13.5.1/img/profileicon/685.png" + icon+".png";
+            Icon = "http://ddragon.leagueoflegends.com/cdn/13.5.1/img/profileicon/" + icon+".png";
             Level = level;
             Tier = tier;
             Rank = rank;
             Wins = wins;
             Losses = losses;
-            Emblem = "Assets/emblem/Emblem_"+tier+".png";
+            Emblem = "../../Assets/emblem/Emblem_"+ tier +".png";
         }
     }
 }

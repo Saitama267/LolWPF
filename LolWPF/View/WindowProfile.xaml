@@ -12,7 +12,7 @@
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                     <Border.Background>
-                        <ImageBrush ImageSource="{Binding Path=ProfileIcon}"/>
+                        <ImageBrush ImageSource="{Binding Path=Icon}"/>
                     </Border.Background>
 
                 </Border>

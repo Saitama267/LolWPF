@@ -131,15 +131,15 @@
     <Resource Include="Assets\logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\emblem\Emblem_Bronze.png" />
-    <Resource Include="Assets\emblem\Emblem_Challenger.png" />
-    <Resource Include="Assets\emblem\Emblem_Diamond.png" />
-    <Resource Include="Assets\emblem\Emblem_Gold.png" />
-    <Resource Include="Assets\emblem\Emblem_Grandmaster.png" />
-    <Resource Include="Assets\emblem\Emblem_Iron.png" />
-    <Resource Include="Assets\emblem\Emblem_Master.png" />
-    <Resource Include="Assets\emblem\Emblem_Platinum.png" />
-    <Resource Include="Assets\emblem\Emblem_Silver.png" />
+    <Resource Include="Assets\emblem\Emblem_BRONZE.png" />
+    <Resource Include="Assets\emblem\Emblem_CHALLENGER.png" />
+    <Resource Include="Assets\emblem\Emblem_DIAMOND.png" />
+    <Resource Include="Assets\emblem\Emblem_GOLD.png" />
+    <Resource Include="Assets\emblem\Emblem_GRANDMASTER.png" />
+    <Resource Include="Assets\emblem\Emblem_IRON.png" />
+    <Resource Include="Assets\emblem\Emblem_MASTER.png" />
+    <Resource Include="Assets\emblem\Emblem_PLATINUM.png" />
+    <Resource Include="Assets\emblem\Emblem_SILVER.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="API\Key.txt" />
