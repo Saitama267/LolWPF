@@ -28,5 +28,10 @@ namespace LolWPF.View
             this.DataContext = controller.GetContext();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
