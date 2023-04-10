@@ -1,4 +1,5 @@
 ﻿using LolWPF.API;
+using LolWPF.Models;
 using LolWPF.Utils;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,14 @@ namespace LolWPF.Controller
             var version = game_Version.GetVersion();
             Constants.Version = version.First();
             return version != null;
+        }
+
+        public ChampionInfo GetChampionsRotaionInfo()
+        {
+            Champion_V3 champion_V3 = new Champion_V3(Constants.Region);
+            var info = champion_V3.GetChampionsRotationIds();
+            
+            return info != null ? info : null;
         }
     }
 }

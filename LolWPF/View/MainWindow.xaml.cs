@@ -1,4 +1,6 @@
 ﻿using LolWPF.Controller;
+using LolWPF.Models;
+using LolWPF.Utils;
 using LolWPF.View;
 using LolWPF.View.ViewModel;
 using System;
@@ -25,17 +27,17 @@ namespace LolWPF
     {
         ControllerMain controller;
         ViewModelMain viewModel;
+        
         public MainWindow()
         {
             controller = new ControllerMain();
             viewModel = new ViewModelMain();
             
             InitializeComponent();
+            
+
+            
             this.DataContext = viewModel;
-            if (controller.GetVersionOfGame())
-            {
-                
-            }
         }
 
         private void ButtonSignUp_Click(object sender, RoutedEventArgs e)
@@ -57,6 +59,19 @@ namespace LolWPF
             else
             {
                 MessageBox.Show("Not found");
+            }
+        }
+
+        private void btnFreeRotaion_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (string.IsNullOrEmpty(viewModel.Region))
+            {
+                return;
+            }
+            if (controller.GetChampionsRotaionInfo()!=null)
+            {
+                
             }
         }
     }
