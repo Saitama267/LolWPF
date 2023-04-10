@@ -29,9 +29,13 @@ namespace LolWPF
         {
             controller = new ControllerMain();
             viewModel = new ViewModelMain();
-
+            
             InitializeComponent();
             this.DataContext = viewModel;
+            if (controller.GetVersionOfGame())
+            {
+                
+            }
         }
 
         private void ButtonSignUp_Click(object sender, RoutedEventArgs e)

@@ -19,5 +19,13 @@ namespace LolWPF.Controller
 
             return summoner != null;
         }
+
+        public bool GetVersionOfGame()
+        {
+            Game_Version game_Version = new Game_Version(Constants.Region);
+            var version = game_Version.GetVersion();
+            Constants.Version = version.First();
+            return version != null;
+        }
     }
 }
