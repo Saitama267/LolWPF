@@ -25,6 +25,14 @@ namespace LolWPF.View
             ControllerRotation controller = new ControllerRotation();
             InitializeComponent();
             this.DataContext = controller.GetContext();
+
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
+            Environment.Exit(0);
         }
     }
 }

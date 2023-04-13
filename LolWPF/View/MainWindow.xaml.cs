@@ -73,7 +73,7 @@ namespace LolWPF
             {
                 FreeRotationWindow rotation = new FreeRotationWindow();
                 rotation.ShowDialog();
-                this.Close();
+                Environment.Exit(0);
             }
             
         }
