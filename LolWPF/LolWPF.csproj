@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logoIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialDesignColors, Version=2.1.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.1\lib\net462\MaterialDesignColors.dll</HintPath>
@@ -210,11 +213,18 @@
     <Compile Include="Models\ChampionInfo.cs" />
     <Compile Include="Models\PositionDTO.cs" />
     <Compile Include="Utils\Constants.cs" />
+    <Compile Include="View\FreeRotationWindow.xaml.cs">
+      <DependentUpon>FreeRotationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewModel\ViewModelMain.cs" />
     <Compile Include="View\ViewModel\ViewModelProfile.cs" />
     <Compile Include="View\WindowProfile.xaml.cs">
       <DependentUpon>WindowProfile.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\FreeRotationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -263,7 +273,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="logo2.ico" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\logo2.png" />
   </ItemGroup>
@@ -280,6 +292,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="API\Key.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logoIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logoIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.7.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.7.1\build\MaterialDesignThemes.targets')" />
