@@ -16,54 +16,54 @@
                         <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ1}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ2}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ3}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ4}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ5}"/>
                                 </Border.Background>
                             </Border>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ6}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ7}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ8}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ9}"/>
                                 </Border.Background>
                             </Border>
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                    <ImageBrush ImageSource="{Binding Path=Champ10}"/>
                                 </Border.Background>
                             </Border>
                         </StackPanel>

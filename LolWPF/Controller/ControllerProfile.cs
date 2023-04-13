@@ -18,7 +18,7 @@ namespace LolWPF.Controller
             var position = GetPoSition(summoner);
             return new ViewModelProfile(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel,position.Tier,position.Rank,position.Wins,position.Losses);
         }
-
+        
         private PositionDTO GetPoSition(SummonerDTO summoner)
         {
             League_V4 league = new League_V4(Constants.Region);

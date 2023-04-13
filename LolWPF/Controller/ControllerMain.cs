@@ -29,12 +29,13 @@ namespace LolWPF.Controller
             return version != null;
         }
 
-        public ChampionInfo GetChampionsRotaionInfo()
+        public bool GetChampionsRotaionInfo()
         {
             Champion_V3 champion_V3 = new Champion_V3(Constants.Region);
-            var info = champion_V3.GetChampionsRotationIds();
+            var champions = champion_V3.GetChampionsRotationIds();
+            Constants.Champions = champions;
             
-            return info != null ? info : null;
+            return champions!=null;
         }
     }
 }

@@ -65,17 +65,17 @@ namespace LolWPF
         private void btnFreeRotaion_Click(object sender, RoutedEventArgs e)
         {
 
-            //if (string.IsNullOrEmpty(viewModel.Region))
-            //{
-            //    return;
-            //}
-            //if (controller.GetChampionsRotaionInfo()!=null)
-            //{
-
-            //}
-            FreeRotationWindow rotation = new FreeRotationWindow();
-            rotation.ShowDialog();
-            this.Close();
+            if (string.IsNullOrEmpty(viewModel.Region))
+            {
+                return;
+            }
+            if (controller.GetChampionsRotaionInfo())
+            {
+                FreeRotationWindow rotation = new FreeRotationWindow();
+                rotation.ShowDialog();
+                this.Close();
+            }
+            
         }
     }
 }

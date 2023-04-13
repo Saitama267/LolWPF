@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LolWPF.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,9 @@ namespace LolWPF.View
     {
         public FreeRotationWindow()
         {
+            ControllerRotation controller = new ControllerRotation();
             InitializeComponent();
+            this.DataContext = controller.GetContext();
         }
     }
 }
