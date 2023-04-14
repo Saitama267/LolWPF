@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LolWPF.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace LolWPF.View.ViewModel
         public ViewModelProfile(string summonerName, int icon, long level, string tier, string rank, int wins, int  losses)
         {
             SummonerName = summonerName;
-            Icon = "http://ddragon.leagueoflegends.com/cdn/13.5.1/img/profileicon/" + icon+".png";
+            Icon = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/profileicon/" + icon + ".png";
             Level = level;
             Tier = tier;
             Rank = rank;
