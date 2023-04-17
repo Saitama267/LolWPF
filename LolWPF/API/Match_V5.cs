@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LolWPF.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,14 +63,14 @@ namespace LolWPF.API
             }
             return null;
         }
-        public List<string> GetMatchInfo(string Id)
-        {
+        public InfoDTO GetMatchInfo(string Id)
+        { 
             string path = "match/v5/matches/" + Id;
             var response = GET(GetURIForMatchData(path));
             string content = response.Content.ReadAsStringAsync().Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<List<string>>(content);
+                return JsonConvert.DeserializeObject<InfoDTO>(content);
             }
             return null;
 

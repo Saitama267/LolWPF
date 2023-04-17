@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LolWPF.Models
 {
-    class ParticipantDto
+    public class ParticipantDto
     {
         public int ChampLevel { get; set; }
         public string ChampionName { get; set; }

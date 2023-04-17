@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace LolWPF.Models
 {
-    class InfoDTO
+    public class InfoDTO
     {
         public string GameMode { get; set; }
+
+        public string GameType { get; set; }
         public List<ParticipantDto> Participants { get; set; }
         
     }
