@@ -208,10 +208,13 @@
     <Compile Include="API\Champion_V3.cs" />
     <Compile Include="API\Game_Version.cs" />
     <Compile Include="API\League_V4.cs" />
+    <Compile Include="API\Match_V5.cs" />
     <Compile Include="Controller\ControllerProfile.cs" />
     <Compile Include="Controller\ControllerRotation.cs" />
     <Compile Include="Helpers\FromJsonToDictionary.cs" />
     <Compile Include="Models\ChampionInfo.cs" />
+    <Compile Include="Models\InfoDTO.cs" />
+    <Compile Include="Models\ParticipantDto.cs" />
     <Compile Include="Models\PositionDTO.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="View\FreeRotationWindow.xaml.cs">
