@@ -226,6 +226,9 @@
     <Compile Include="View\WindowProfile.xaml.cs">
       <DependentUpon>WindowProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WindowProfile2.xaml.cs">
+      <DependentUpon>WindowProfile2.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\FreeRotationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,6 +250,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\WindowProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowProfile2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

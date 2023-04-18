@@ -1,0 +1,62 @@
+﻿<Window x:Class="LolWPF.View.WindowProfile2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LolWPF.View"
+        mc:Ignorable="d"
+        Title="" Height="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF4F0153">
+    <Grid>
+        <Border Background="White" Margin="20 100 20 20" CornerRadius="15" >
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                    </Border.Background>
+                </Border>
+                <TextBlock Margin="20,15,555,15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
+                <StackPanel Orientation="Horizontal" Margin="20,0,619,0">
+                    <StackPanel Margin="5">
+                        <TextBlock Text="WINS" FontSize="15" FontWeight="Bold" Foreground="Green"/>
+                        <TextBlock Text="{Binding Path=Wins}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="DarkRed"/>
+                        <TextBlock Text="{Binding Path=Losses}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="30,20,640,20">
+                    <TextBlock Text="LEVEL" FontSize="15" FontWeight="Bold" Foreground="DimGray"/>
+                    <TextBlock Text="{Binding Path=Level}" HorizontalAlignment="Center" FontSize="40" Foreground="Goldenrod"/>
+                </StackPanel>
+                <StackPanel>
+                    <Border Background="LightSkyBlue" Margin="20 20" CornerRadius="15"  Height="120">
+                        <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
+                            <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
+                            <Border Width="50" Height="50" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                </Border.Background>
+                            </Border>
+                        </StackPanel>
+                        
+                    </Border>
+                </StackPanel>
+                <Grid Margin="20 10">
+                    <Button HorizontalAlignment="Center" Width="100" Content="CANCEL" Click="Button_Click"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <StackPanel HorizontalAlignment="Right" Margin="30 10">
+            <Image Source="{Binding Path=Emblem}" Width="200" Height="200">
+                <Image.Effect>
+                    <DropShadowEffect BlurRadius="40"/>
+                </Image.Effect>
+            </Image>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Tier}" Margin="5" VerticalAlignment="Center"/>
+                <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Rank}" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
