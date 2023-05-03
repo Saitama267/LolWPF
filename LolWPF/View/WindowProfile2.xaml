@@ -8,44 +8,120 @@
         Title="" Height="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF4F0153">
     <Grid>
         <Border Background="White" Margin="20 100 20 20" CornerRadius="15" >
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
-                <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                    <Border.Background>
-                        <ImageBrush ImageSource="{Binding Path=Icon}"/>
-                    </Border.Background>
-                </Border>
-                <TextBlock Margin="20,15,555,15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
-                <StackPanel Orientation="Horizontal" Margin="20,0,619,0">
-                    <StackPanel Margin="5">
-                        <TextBlock Text="WINS" FontSize="15" FontWeight="Bold" Foreground="Green"/>
-                        <TextBlock Text="{Binding Path=Wins}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+            <StackPanel >
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
+                    <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                        <Border.Background>
+                            <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                        </Border.Background>
+                    </Border>
+                    <TextBlock Margin="20 15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
+                    <StackPanel Margin="30 20">
+                        <TextBlock Text="LEVEL" FontSize="15" FontWeight="Bold" Foreground="DimGray"/>
+                        <TextBlock Text="{Binding Level}" HorizontalAlignment="Center" FontSize="40" Foreground="Goldenrod"/>
                     </StackPanel>
-                    <StackPanel Margin="5">
-                        <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="DarkRed"/>
-                        <TextBlock Text="{Binding Path=Losses}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" Margin="20 0">
+                        <StackPanel Margin="5 20">
+                            <TextBlock Text="WINS" FontSize="15" FontWeight="Bold" Foreground="Green"/>
+                            <TextBlock Text="{Binding Path=Wins}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Margin="5 20" >
+                            <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="DarkRed"/>
+                            <TextBlock Text="{Binding Path=Losses}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="30,20,640,20">
-                    <TextBlock Text="LEVEL" FontSize="15" FontWeight="Bold" Foreground="DimGray"/>
-                    <TextBlock Text="{Binding Path=Level}" HorizontalAlignment="Center" FontSize="40" Foreground="Goldenrod"/>
+                    
+                    
                 </StackPanel>
                 <StackPanel>
                     <Border Background="LightSkyBlue" Margin="20 20" CornerRadius="15"  Height="120">
-                        <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
-                            <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
-                            <Border Width="50" Height="50" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
-                                </Border.Background>
-                            </Border>
+                        <StackPanel>
+                            <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Orientation="Horizontal" >
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
+                                    <TextBlock Margin="0 50" TextAlignment="Center" Text="Result" FontWeight="Bold" Foreground="DimGray"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="50" Height="50"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <StackPanel Orientation="Vertical" Margin="15 0">
+                                            <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                                </Border.Background>
+                                            </Border>
+                                            <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                                </Border.Background>
+                                            </Border>
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <StackPanel Margin="0 5" Orientation="Horizontal">
+                                                <TextBlock Text="15" Foreground="DarkGreen" FontWeight="Bold"  />
+                                                <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                <TextBlock Text="7" Foreground="DarkRed" FontWeight="Bold"  />
+                                                <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                <TextBlock Text="6" Foreground="DarkGoldenrod" FontWeight="Bold"  />
+                                            </StackPanel>
+                                            <TextBlock Text="CS:" Foreground="DimGray" FontWeight="Bold" />
+                                        </StackPanel>
+                                        
+                                    </StackPanel>
+                                    
+                                    <StackPanel Orientation="Horizontal" Margin="0 15" >
+                                        <Border Width="20" Height="20" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <Border Width="20" Height="20" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                                            </Border.Background>
+                                        </Border>
+                                    </StackPanel>
+                                    
+                                </StackPanel>
+                            </StackPanel>
                         </StackPanel>
-                        
                     </Border>
                 </StackPanel>
                 <Grid Margin="20 10">
-                    <Button HorizontalAlignment="Center" Width="100" Content="CANCEL" Click="Button_Click"/>
+                    <Button HorizontalAlignment="Center" Width="100" Content="CANCEL" />
                 </Grid>
             </StackPanel>
+            
+           
         </Border>
         <StackPanel HorizontalAlignment="Right" Margin="30 10">
             <Image Source="{Binding Path=Emblem}" Width="200" Height="200">

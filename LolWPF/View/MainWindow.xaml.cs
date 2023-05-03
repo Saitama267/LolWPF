@@ -52,9 +52,10 @@ namespace LolWPF
             }
             if (controller.GetSummoner(viewModel.SummonerName) && controller.GetVersionOfGame())
             {
+                this.Close();
                 WindowProfile profile = new WindowProfile();
                 profile.ShowDialog();
-                this.Close();
+                
             }
             else
             {
@@ -72,8 +73,10 @@ namespace LolWPF
             if (controller.GetChampionsRotaionInfo())
             {
                 FreeRotationWindow rotation = new FreeRotationWindow();
+                this.Close();
+                
                 rotation.ShowDialog();
-                Environment.Exit(0);
+                
             }
             
         }
