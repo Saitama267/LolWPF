@@ -17,6 +17,7 @@ namespace LolWPF.API
         public SummonerDTO GetSummonerByName(string SummonerName)
         {
             string path = "summoner/v4/summoners/by-name/" + SummonerName;
+            int d = 0;
             var response = GET(GetURI(path));
             string content = response.Content.ReadAsStringAsync().Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
