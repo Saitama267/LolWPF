@@ -63,14 +63,14 @@ namespace LolWPF.API
             }
             return null;
         }
-        public InfoDTO GetMatchInfo(string Id)
+        public MatchDto GetMatchInfo(string Id)
         { 
             string path = "match/v5/matches/" + Id;
             var response = GET(GetURIForMatchData(path));
             string content = response.Content.ReadAsStringAsync().Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<InfoDTO>(content);
+                return JsonConvert.DeserializeObject<MatchDto>(content);
             }
             return null;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LolWPF.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,23 @@ namespace LolWPF.View
     /// </summary>
     public partial class WindowProfile2 : Window
     {
+        ControllerProfile2 controller;
         public WindowProfile2()
         {
             InitializeComponent();
+            controller = new ControllerProfile2();
+            this.DataContext = controller.GetContext();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
