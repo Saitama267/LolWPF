@@ -31,8 +31,8 @@ namespace LolWPF.View
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
+            this.Close();
             main.ShowDialog();
-            Environment.Exit(0);
         }
     }
 }
