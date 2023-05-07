@@ -179,4 +179,23 @@ namespace LolWPF.Utils
         Gwen = 887,
         Lillia = 876,
     }
+    enum SummonerSpells
+    {
+        SummonerBoost = 1,
+        SummonerExhaust = 3,
+        SummonerFlash = 4,
+        SummonerHaste = 6,
+        SummonerHeal = 7,
+        SummonerSmite = 11,
+        SummonerTeleport = 12,
+        SummonerMana = 13,
+        SummonerDot = 14,
+        SummonerBarrier = 21,
+        SummonerPoroRecall = 30,
+        SummonerPoroThrow = 31,
+        SummonerSnowball = 32,
+        SummonerSnowURFSnowball_Mark =39
+
+
+    }
 }

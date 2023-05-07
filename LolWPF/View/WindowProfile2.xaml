@@ -8,121 +8,317 @@
         Title="" Height="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF4F0153">
     <Grid>
         <Border Background="White" Margin="20 100 20 20" CornerRadius="15" >
-            <StackPanel >
+            <StackPanel>
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Orientation="Horizontal" >
-                    <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                        <Border.Background>
-                            <ImageBrush ImageSource="{Binding Path=Icon}"/>
-                        </Border.Background>
-                    </Border>
-                    <TextBlock Margin="20 15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
-                    <StackPanel Margin="30 20">
-                        <TextBlock Text="LEVEL" FontSize="15" FontWeight="Bold" Foreground="DimGray"/>
-                        <TextBlock Text="{Binding Level}" HorizontalAlignment="Center" FontSize="40" Foreground="Goldenrod"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="20 0">
-                        <StackPanel Margin="5 20">
-                            <TextBlock Text="WINS" FontSize="15" FontWeight="Bold" Foreground="Green"/>
-                            <TextBlock Text="{Binding Path=Wins}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Margin="5 20" >
-                            <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="DarkRed"/>
-                            <TextBlock Text="{Binding Path=Losses}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Vertical">
+                        <Border Width="100" Height="100" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="20 15" FontSize="20" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
+                        <StackPanel Margin="30 20">
+                            <TextBlock Text="LEVEL" FontSize="15" FontWeight="Bold" Foreground="DimGray"/>
+                            <TextBlock Text="{Binding Level}" HorizontalAlignment="Center" FontSize="40" Foreground="Goldenrod"/>
                         </StackPanel>
                     </StackPanel>
-                    
-                    
-                </StackPanel>
-                <StackPanel>
-                    <Border Background="LightSkyBlue" Margin="20 20" CornerRadius="15"  Height="120">
-                        <StackPanel>
-                            <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Orientation="Horizontal" >
-                                <StackPanel Orientation="Vertical" Margin="10 0">
-                                    <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
-                                    <TextBlock Text="{Binding Path=GameType}" Margin="0 15" FontWeight="Bold" TextAlignment="Center"  Foreground="DimGray" />
-                                    <TextBlock Margin="0 " TextAlignment="Center" Text="Result" FontWeight="Bold" Foreground="DimGray"/>
-                                    <TextBlock Text="{Binding Path=Result}" TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
-                                </StackPanel>
-                                <StackPanel Margin="5 0">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Border Width="50" Height="50"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=ChampIcon}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <StackPanel Margin="10 0">
-                                            <TextBlock Margin="0 5" Text="Level" FontWeight="Bold" Foreground="DimGray"/>
-                                            <TextBlock Text="{Binding Path=ChampLevel}" Margin="0 5"  TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Vertical" Margin="15 0">
-                                            <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
-                                                <Border.Background>
-                                                    <ImageBrush ImageSource="{Binding Path=GmSummoner1}"/>
-                                                </Border.Background>
-                                            </Border>
-                                            <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
-                                                <Border.Background>
-                                                    <ImageBrush ImageSource="{Binding Path=GmSummoner2}"/>
-                                                </Border.Background>
-                                            </Border>
-                                        </StackPanel>
-                                        <StackPanel>
-                                            <StackPanel Margin="0 5" Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Path=GmKills}" Foreground="DarkGreen" FontWeight="Bold"  />
-                                                <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
-                                                <TextBlock Text="{Binding Path=GmDeaths}" Foreground="DarkRed" FontWeight="Bold"  />
-                                                <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
-                                                <TextBlock Text="{Binding Path=GmAssists}" Foreground="DarkGoldenrod" FontWeight="Bold"  />
-                                            </StackPanel>
-                                            <TextBlock Text="CS" Foreground="DimGray" FontWeight="Bold" />
-                                            <TextBlock Text="{Binding Path=GmCS}" Foreground="DimGray" FontWeight="Bold" />
-                                        </StackPanel>
-                                        
-                                    </StackPanel>
-                                    
-                                    <StackPanel Orientation="Horizontal" Margin="0 15" >
-                                        <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem0}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem1}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem2}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem3}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem4}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem5}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding Path=GmItem6}"/>
-                                            </Border.Background>
-                                        </Border>
-                                    </StackPanel>
-                                    
-                                </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="400">
+                        <StackPanel Orientation="Horizontal" Margin="20 0">
+                            <StackPanel Margin="5 20">
+                                <TextBlock Text="WINS" FontSize="15" FontWeight="Bold" Foreground="Green"/>
+                                <TextBlock Text="{Binding Path=Wins}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Margin="5 20" >
+                                <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="DarkRed"/>
+                                <TextBlock Text="{Binding Path=Losses}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </StackPanel>
-                    </Border>
+                        <StackPanel>
+                            <Border Background="LightSkyBlue" Margin="20 0 0 20 " BorderThickness="1" BorderBrush="Black"  CornerRadius="15"  Height="120">
+                                <StackPanel>
+                                    <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Orientation="Horizontal" >
+                                        <StackPanel Orientation="Vertical" Margin="10 0">
+                                            <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
+                                            <TextBlock Text="{Binding Path=GameType}" Margin="0 15" FontWeight="Bold" TextAlignment="Center"  Foreground="DimGray" />
+                                            <TextBlock Margin="0 " TextAlignment="Center" Text="Result" FontWeight="Bold" Foreground="DimGray"/>
+                                            <TextBlock Text="{Binding Path=Result}" TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="5 0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Width="50" Height="50"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=ChampIcon}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <StackPanel Margin="10 0">
+                                                    <TextBlock Margin="0 5" Text="Level" FontWeight="Bold" Foreground="DimGray"/>
+                                                    <TextBlock Text="{Binding Path=ChampLevel}" Margin="0 5"  TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Margin="15 0">
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner1}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner2}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                </StackPanel>
+                                                <StackPanel>
+                                                    <StackPanel Margin="0 5" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Path=GmKills}" Foreground="DarkGreen" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmDeaths}" Foreground="DarkRed" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmAssists}" Foreground="DarkGoldenrod" FontWeight="Bold"  />
+                                                    </StackPanel>
+                                                    <TextBlock Text="CS" Foreground="DimGray" FontWeight="Bold" />
+                                                    <TextBlock Text="{Binding Path=GmCS}" Foreground="DimGray" FontWeight="Bold" />
+                                                </StackPanel>
+
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal" Margin="0 15" >
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem0}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem1}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem2}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem3}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem4}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem5}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem6}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <Border Background="LightSkyBlue" Margin="20 0 0 20 " BorderThickness="1" BorderBrush="Black"  CornerRadius="15"  Height="120">
+                                <StackPanel>
+                                    <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Orientation="Horizontal" >
+                                        <StackPanel Orientation="Vertical" Margin="10 0">
+                                            <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
+                                            <TextBlock Text="{Binding Path=GameType}" Margin="0 15" FontWeight="Bold" TextAlignment="Center"  Foreground="DimGray" />
+                                            <TextBlock Margin="0 " TextAlignment="Center" Text="Result" FontWeight="Bold" Foreground="DimGray"/>
+                                            <TextBlock Text="{Binding Path=Result}" TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="5 0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Width="50" Height="50"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=ChampIcon}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <StackPanel Margin="10 0">
+                                                    <TextBlock Margin="0 5" Text="Level" FontWeight="Bold" Foreground="DimGray"/>
+                                                    <TextBlock Text="{Binding Path=ChampLevel}" Margin="0 5"  TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Margin="15 0">
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner1}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner2}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                </StackPanel>
+                                                <StackPanel>
+                                                    <StackPanel Margin="0 5" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Path=GmKills}" Foreground="DarkGreen" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmDeaths}" Foreground="DarkRed" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmAssists}" Foreground="DarkGoldenrod" FontWeight="Bold"  />
+                                                    </StackPanel>
+                                                    <TextBlock Text="CS" Foreground="DimGray" FontWeight="Bold" />
+                                                    <TextBlock Text="{Binding Path=GmCS}" Foreground="DimGray" FontWeight="Bold" />
+                                                </StackPanel>
+
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal" Margin="0 15" >
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem0}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem1}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem2}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem3}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem4}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem5}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem6}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <Border Background="LightSkyBlue" Margin="20 0 0 20 " BorderThickness="1" BorderBrush="Black"  CornerRadius="15"  Height="120">
+                                <StackPanel>
+                                    <StackPanel Height="120" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Orientation="Horizontal" >
+                                        <StackPanel Orientation="Vertical" Margin="10 0">
+                                            <TextBlock Text="Game Type" FontWeight="Bold" Foreground="DimGray" />
+                                            <TextBlock Text="{Binding Path=GameType}" Margin="0 15" FontWeight="Bold" TextAlignment="Center"  Foreground="DimGray" />
+                                            <TextBlock Margin="0 " TextAlignment="Center" Text="Result" FontWeight="Bold" Foreground="DimGray"/>
+                                            <TextBlock Text="{Binding Path=Result}" TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="5 0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border Width="50" Height="50"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=ChampIcon}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <StackPanel Margin="10 0">
+                                                    <TextBlock Margin="0 5" Text="Level" FontWeight="Bold" Foreground="DimGray"/>
+                                                    <TextBlock Text="{Binding Path=ChampLevel}" Margin="0 5"  TextAlignment="Center" FontWeight="Bold" Foreground="DimGray"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Margin="15 0">
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner1}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <Border Width="22" Height="22"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1" CornerRadius="5" Margin="0 2.5">
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding Path=GmSummoner2}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                </StackPanel>
+                                                <StackPanel>
+                                                    <StackPanel Margin="0 5" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Path=GmKills}" Foreground="DarkGreen" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmDeaths}" Foreground="DarkRed" FontWeight="Bold"  />
+                                                        <TextBlock Text="/" Foreground="DimGray" FontWeight="Bold"  />
+                                                        <TextBlock Text="{Binding Path=GmAssists}" Foreground="DarkGoldenrod" FontWeight="Bold"  />
+                                                    </StackPanel>
+                                                    <TextBlock Text="CS" Foreground="DimGray" FontWeight="Bold" />
+                                                    <TextBlock Text="{Binding Path=GmCS}" Foreground="DimGray" FontWeight="Bold" />
+                                                </StackPanel>
+
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Horizontal" Margin="0 15" >
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem0}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem1}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem2}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0"  HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem3}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25"  Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem4}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem5}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <Border Width="25" Height="25" Margin="1.25 0" HorizontalAlignment="Left"   BorderBrush="Gray"  BorderThickness="1.25" CornerRadius="5" VerticalAlignment="Bottom">
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding Path=GmItem6}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Right" Margin="20 20 0 0">
+                        <Image Source="{Binding Path=Emblem}"  Width="150" Height="150">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="40"/>
+                            </Image.Effect>
+                        </Image>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                            <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Tier}" Margin="5" VerticalAlignment="Center"/>
+                            <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Rank}" Margin="5"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
                 </StackPanel>
+                
                 <Grid Margin="20 10">
                     <Button HorizontalAlignment="Center" Width="100" Content="CANCEL" Click="Button_Click" />
                 </Grid>
@@ -130,16 +326,6 @@
             
            
         </Border>
-        <StackPanel HorizontalAlignment="Right" Margin="30 10">
-            <Image Source="{Binding Path=Emblem}" Width="200" Height="200">
-                <Image.Effect>
-                    <DropShadowEffect BlurRadius="40"/>
-                </Image.Effect>
-            </Image>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Tier}" Margin="5" VerticalAlignment="Center"/>
-                <TextBlock FontSize="18" Foreground="Gray" Text="{Binding Path=Rank}" Margin="5"/>
-            </StackPanel>
-        </StackPanel>
+        
     </Grid>
 </Window>
