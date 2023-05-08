@@ -21,7 +21,7 @@ namespace LolWPF.Controller
         private List<string> GetChampionNames(ChampionInfo championInfo)
         {
             List<string> temp = new List<string>();
-            foreach (var item in championInfo.FreeChampionIdsForNewPlayers)
+            foreach (var item in championInfo.freeChampionIds)
             {
                 if(Enum.IsDefined(typeof(Champs), item))
                 {
