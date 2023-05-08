@@ -67,6 +67,60 @@
                                 </Border.Background>
                             </Border>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ11}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ12}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ13}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ14}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ15}"/>
+                                </Border.Background>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ16}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ17}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ18}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ19}"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="{Binding Path=Champ20}"/>
+                                </Border.Background>
+                            </Border>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Button x:Name="btnClose" Margin="15 50" Content="CLOSE" Click="btnClose_Click" />
                         </StackPanel>
