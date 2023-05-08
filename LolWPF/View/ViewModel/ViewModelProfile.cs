@@ -1,4 +1,5 @@
-﻿using LolWPF.Utils;
+﻿using LolWPF.Models;
+using LolWPF.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +19,16 @@ namespace LolWPF.View.ViewModel
         public int Wins { get; private set; }
         public int Losses { get; private set; }
 
-        public ViewModelProfile(string summonerName, int icon, long level, string tier, string rank, int wins, int losses)
+        public ViewModelProfile(SummonerDTO summoner,PositionDTO position)
         {
-            SummonerName = summonerName;
-            Icon = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/profileicon/" + icon + ".png";
-            Level = level;
-            Tier = tier;
-            Rank = rank != null ? rank : "UNRANKED";
-            Wins = wins;
-            Losses = losses;
-            Emblem = "../../Assets/emblem/Emblem_" + (tier != null ? tier : "Unranked") + ".png";
+            SummonerName = summoner.Name;
+            Icon = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/profileicon/" + summoner.ProfileIconId + ".png";
+            Level = summoner.SummonerLevel;
+            Tier = position.Tier;
+            Rank = position.Rank != null ? position.Rank : "UNRANKED";
+            Wins = position.Wins;
+            Losses = position.Losses;
+            Emblem = "../../Assets/emblem/Emblem_" + (position.Tier != null ? position.Tier : "Unranked") + ".png";
         }
     }
 }

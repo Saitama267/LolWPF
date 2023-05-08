@@ -29,12 +29,18 @@ namespace LolWPF.View
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
             this.Close();
             main.ShowDialog();
             
+        }
+
+        private void btnDetails_Click(object sender, RoutedEventArgs e)
+        {
+            WindowProfile2 windowProfile2 = new WindowProfile2();
+            windowProfile2.ShowDialog();
         }
     }
 }

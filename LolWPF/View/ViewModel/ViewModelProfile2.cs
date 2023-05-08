@@ -18,26 +18,42 @@ namespace LolWPF.View.ViewModel
         public string Emblem { get; private set; }
         public int Wins { get; private set; }
         public int Losses { get; private set; }
-        public string GameType { get; set; }
-        public string Result { get; set; }
-        public string ChampIcon { get; set; }
-        public int ChampLevel { get; set; }
-        public int GmKills { get; set; }
-        public int GmDeaths { get; set; }
-        public int GmAssists { get; set; }
-        public string GmItem0 { get; set; }
-        public string GmItem1 { get; set; }
-        public string GmItem2 { get; set; }
-        public string GmItem3 { get; set; }
-        public string GmItem4 { get; set; }
-        public string GmItem5 { get; set; }
-        public string GmItem6 { get; set; }
-        public string GmSummoner1 { get; set; }
-        public string GmSummoner2 { get; set; }
-        public int GmCS { get; set; }
+        public string Game1Type { get; set; }
+        public string Result1 { get; set; }
+        public string ChampIcon1 { get; set; }
+        public int ChampLevel1 { get; set; }
+        public int Gm1Kills { get; set; }
+        public int Gm1Deaths { get; set; }
+        public int Gm1Assists { get; set; }
+        public string Gm1Item0 { get; set; }
+        public string Gm1Item1 { get; set; }
+        public string Gm1Item2 { get; set; }
+        public string Gm1Item3 { get; set; }
+        public string Gm1Item4 { get; set; }
+        public string Gm1Item5 { get; set; }
+        public string Gm1Item6 { get; set; }
+        public string Gm1Summoner1 { get; set; }
+        public string Gm1Summoner2 { get; set; }
+        public int Gm1CS { get; set; }
+        public string Game2Type { get; set; }
+        public string Result2{ get; set; }
+        public string ChampIcon2 { get; set; }
+        public int ChampLevel2 { get; set; }
+        public int Gm2Kills { get; set; }
+        public int Gm2Deaths { get; set; }
+        public int Gm2Assists { get; set; }
+        public string Gm2Item0 { get; set; }
+        public string Gm2Item1 { get; set; }
+        public string Gm2Item2 { get; set; }
+        public string Gm2Item3 { get; set; }
+        public string Gm2Item4 { get; set; }
+        public string Gm2Item5 { get; set; }
+        public string Gm2Item6 { get; set; }
+        public string Gm2Summoner1 { get; set; }
+        public string Gm2Summoner2 { get; set; }
+        public int Gm2CS { get; set; }
 
-
-        public ViewModelProfile2(SummonerDTO summoner,PositionDTO position, string gameType, ParticipantDto participantDto)
+        public ViewModelProfile2(SummonerDTO summoner,PositionDTO position, string game1Type, ParticipantDto participant1Dto, string game2Type, ParticipantDto participant2Dto, string game3Type, ParticipantDto participant3Dto)
         {
             SummonerName = summoner.Name;
             Icon = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/profileicon/" + summoner.ProfileIconId + ".png";
@@ -47,24 +63,42 @@ namespace LolWPF.View.ViewModel
             Wins = position.Wins;
             Losses = position.Losses;
             Emblem = "../../Assets/emblem/Emblem_" + (position.Tier!=null?position.Tier:"Unranked") + ".png";
-            GameType = gameType;
-            Result = participantDto.Win == true?"WIN" : "LOSE";
-            ChampIcon = "http://ddragon.leagueoflegends.com/cdn/13.9.1/img/champion/"+participantDto.ChampionName+".png";
-            ChampLevel = participantDto.ChampLevel;
-            GmKills = participantDto.Kills;
-            GmDeaths = participantDto.Deaths;
-            GmAssists = participantDto.Assists;
-            GmItem0 = participantDto.Item0 >0? "http://ddragon.leagueoflegends.com/cdn/"+ Constants.Version +"/img/item/"+participantDto.Item0+".png" : "";
-            GmItem1 = participantDto.Item1 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item1 + ".png" : ""; 
-            GmItem2 = participantDto.Item2 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item2 + ".png" : ""; 
-            GmItem3 = participantDto.Item3 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item3 + ".png" : ""; 
-            GmItem4 = participantDto.Item4 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item4 + ".png" : ""; 
-            GmItem5 = participantDto.Item5 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item5 + ".png" : ""; 
-            GmItem6 = participantDto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participantDto.Item6 + ".png" : ""; 
-            GmSummoner1 = "http://ddragon.leagueoflegends.com/cdn/"+ Constants.Version + "/img/spell/"+  Enum.GetName(typeof(SummonerSpells), participantDto.Summoner1Id) + ".png";
-            GmSummoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participantDto.Summoner2Id) + ".png";
-            GmCS = participantDto.TotalMinionsKilled;
+            Game1Type = game1Type;
+            Result1 = participant1Dto.Win == true?"WIN" : "LOSE";
+            ChampIcon1 = "http://ddragon.leagueoflegends.com/cdn/13.9.1/img/champion/"+participant1Dto.ChampionName+".png";
+            ChampLevel1 = participant1Dto.ChampLevel;
+            Gm1Kills = participant1Dto.Kills;
+            Gm1Deaths = participant1Dto.Deaths;
+            Gm1Assists = participant1Dto.Assists;
+            Gm1Item0 = participant1Dto.Item0 >0? "http://ddragon.leagueoflegends.com/cdn/"+ Constants.Version +"/img/item/"+participant1Dto.Item0+".png" : "";
+            Gm1Item1 = participant1Dto.Item1 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item1 + ".png" : ""; 
+            Gm1Item2 = participant1Dto.Item2 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item2 + ".png" : ""; 
+            Gm1Item3 = participant1Dto.Item3 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item3 + ".png" : ""; 
+            Gm1Item4 = participant1Dto.Item4 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item4 + ".png" : ""; 
+            Gm1Item5 = participant1Dto.Item5 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item5 + ".png" : ""; 
+            Gm1Item6 = participant1Dto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item6 + ".png" : ""; 
+            Gm1Summoner1 = "http://ddragon.leagueoflegends.com/cdn/"+ Constants.Version + "/img/spell/"+  Enum.GetName(typeof(SummonerSpells), participant1Dto.Summoner1Id) + ".png";
+            Gm1Summoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant1Dto.Summoner2Id) + ".png";
+            Gm1CS = participant1Dto.TotalMinionsKilled;
 
-    }
+            Game2Type = game2Type;
+            Result2 = participant2Dto.Win == true ? "WIN" : "LOSE";
+            ChampIcon2 = "http://ddragon.leagueoflegends.com/cdn/13.9.1/img/champion/" + participant2Dto.ChampionName + ".png";
+            ChampLevel2 = participant2Dto.ChampLevel;
+            Gm2Kills = participant2Dto.Kills;
+            Gm2Deaths = participant2Dto.Deaths;
+            Gm2Assists = participant2Dto.Assists;
+            Gm2Item0 = participant2Dto.Item0 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item0 + ".png" : "";
+            Gm2Item1 = participant2Dto.Item1 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item1 + ".png" : "";
+            Gm2Item2 = participant2Dto.Item2 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item2 + ".png" : "";
+            Gm2Item3 = participant2Dto.Item3 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item3 + ".png" : "";
+            Gm2Item4 = participant2Dto.Item4 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item4 + ".png" : "";
+            Gm2Item5 = participant2Dto.Item5 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item5 + ".png" : "";
+            Gm2Item6 = participant2Dto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item6 + ".png" : "";
+            Gm1Summoner1 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant2Dto.Summoner1Id) + ".png";
+            Gm1Summoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant2Dto.Summoner2Id) + ".png";
+            Gm1CS = participant2Dto.TotalMinionsKilled;
+
+        }
     }
 }

@@ -29,15 +29,9 @@ namespace LolWPF.View
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
             this.Close();
-            main.ShowDialog();
             
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -15,26 +15,27 @@ namespace LolWPF.Controller
         public object GetContext()
         {
             var summoner = Constants.Summoner;
-            var position = GetPoSition(summoner);
+            var position = Constants.Position;
             var gameInfo = GetGameInfo();
-            var participant = gameInfo.Participants.Find(p => p.Puuid == Constants.Summoner.Puuid);
-            return new ViewModelProfile2(summoner,position, gameInfo.GameMode,participant);
+            var participant1 = gameInfo[0].Participants.Find(p => p.Puuid == Constants.Summoner.Puuid);
+            var participant2 = gameInfo[1].Participants.Find(p => p.Puuid == Constants.Summoner.Puuid);
+            var participant3 = gameInfo[2].Participants.Find(p => p.Puuid == Constants.Summoner.Puuid);
+            return new ViewModelProfile2(summoner,position, gameInfo[0].GameMode,participant1,gameInfo[1].GameMode,participant2,gameInfo[2].GameMode,participant3);
         }
 
-        private PositionDTO GetPoSition(SummonerDTO summoner)
-        {
-            League_V4 league = new League_V4(Constants.Region);
-            var position = league.GetPositions(summoner.Id).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
-            return position != null ? position : new PositionDTO();
-
-        }
-
-        private InfoDTO GetGameInfo()
+        private List<InfoDTO> GetGameInfo()
         {
             Match_V5 match_V5 = new Match_V5(Constants.Region);
+            MatchDto matchDTO = new MatchDto();
             List<string> ids=match_V5.GetMatchsId(Constants.Summoner.Puuid);
-            MatchDto matchDTO = match_V5.GetMatchInfo(ids.First());
-            return matchDTO != null ? matchDTO.Info : new InfoDTO();
+            List<InfoDTO> info = new List<InfoDTO>();
+            for (int i = 0; i < 3; i++)
+            {
+                matchDTO = match_V5.GetMatchInfo(ids[i]);
+                info.Add(matchDTO != null ? matchDTO.Info : new InfoDTO());
+            }
+            
+            return info;
 
         }
     }

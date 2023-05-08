@@ -32,7 +32,11 @@
                     <TextBlock Text="{Binding Path=Level}" HorizontalAlignment="Center" FontSize="80" Foreground="Goldenrod"/>
                 </StackPanel>
                 <Grid Margin="20 10">
-                    <Button HorizontalAlignment="Center" Width="100" Content="CANCEL" Click="Button_Click"/>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Margin="20 0"  Width="100" Content="CANCEL" Click="btnClose_Click"/>
+                        <Button  Width="100" Content="DETAILS" Click="btnDetails_Click"/>
+                    </StackPanel>
+                    
                 </Grid>
             </StackPanel>
         </Border>
