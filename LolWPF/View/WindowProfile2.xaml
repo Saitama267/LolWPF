@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LolWPF.View"
         mc:Ignorable="d"
-        Title="" Height="600" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="Goldenrod">
+        Title="" Height="600" Width="875" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="Goldenrod">
     <Grid>
         <Border Background="White" Margin="20 20 20 20" CornerRadius="15" >
             <StackPanel>

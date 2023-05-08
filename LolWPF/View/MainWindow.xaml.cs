@@ -80,5 +80,10 @@ namespace LolWPF
             }
             
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
