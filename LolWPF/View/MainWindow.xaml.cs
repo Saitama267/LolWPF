@@ -85,5 +85,12 @@ namespace LolWPF
         {
             Environment.Exit(0);
         }
+
+        private void btnChampLore_Click(object sender, RoutedEventArgs e)
+        {
+            ChampDetailsWindow champ = new ChampDetailsWindow();
+            this.Close();
+            champ.ShowDialog();
+        }
     }
 }

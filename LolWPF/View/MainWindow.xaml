@@ -29,6 +29,7 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="btnFreeRotation" Margin="15 50" Content="FREEROTATION" Click="btnFreeRotaion_Click"/>
                         <Button x:Name="btnSignUp" Margin="15 50" Content="SEARCH" Click="ButtonSignUp_Click"/>
+                        <Button x:Name="btnChampLore" Margin="15 50" Content="CHAMPION LORE" Click="btnChampLore_Click"/>
                         <Button x:Name="btnExit" Margin="15 50" Content="EXIT" Click="btnExit_Click"/>
                     </StackPanel>
                 </StackPanel>

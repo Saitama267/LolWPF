@@ -218,6 +218,9 @@
     <Compile Include="Models\ParticipantDto.cs" />
     <Compile Include="Models\PositionDTO.cs" />
     <Compile Include="Utils\Constants.cs" />
+    <Compile Include="View\ChampDetailsWindow.xaml.cs">
+      <DependentUpon>ChampDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FreeRotationWindow.xaml.cs">
       <DependentUpon>FreeRotationWindow.xaml</DependentUpon>
     </Compile>
@@ -231,6 +234,10 @@
     <Compile Include="View\WindowProfile2.xaml.cs">
       <DependentUpon>WindowProfile2.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\ChampDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\FreeRotationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
