@@ -23,6 +23,7 @@ namespace LolWPF.Models
         public int Summoner1Id { get; set; }
         public int Summoner2Id { get; set; }
         public int TotalMinionsKilled { get; set; }
+        public int NeutralMinionsKilled { get; set; }
         public string Puuid { get; set; }
         public bool Win { get; set; }
     }
