@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LolWPF.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="" Height="550" Width="1050" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"   Background="#FF4F0153" ScrollViewer.VerticalScrollBarVisibility="Visible"  >
+        Title="" Height="550" Width="1050" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"   Background="Goldenrod" ScrollViewer.VerticalScrollBarVisibility="Visible"  >
     <Grid >
         <StackPanel Margin="50">
             

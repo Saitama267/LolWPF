@@ -34,6 +34,7 @@ namespace LolWPF.View.ViewModel
         public string Gm1Item6 { get; set; }
         public string Gm1Summoner1 { get; set; }
         public string Gm1Summoner2 { get; set; }
+        public string Gm1Role { get; set; }
         public int Gm1CS { get; set; }
         public string Game2Type { get; set; }
         public string Result2{ get; set; }
@@ -51,6 +52,7 @@ namespace LolWPF.View.ViewModel
         public string Gm2Item6 { get; set; }
         public string Gm2Summoner1 { get; set; }
         public string Gm2Summoner2 { get; set; }
+        public string Gm2Role { get; set; }
         public int Gm2CS { get; set; }
         public string Game3Type { get; set; }
         public string Result3 { get; set; }
@@ -68,6 +70,7 @@ namespace LolWPF.View.ViewModel
         public string Gm3Item6 { get; set; }
         public string Gm3Summoner1 { get; set; }
         public string Gm3Summoner2 { get; set; }
+        public string Gm3Role { get; set; }
         public int Gm3CS { get; set; }
         public ViewModelProfile2(SummonerDTO summoner,PositionDTO position, string game1Type, ParticipantDto participant1Dto, string game2Type, ParticipantDto participant2Dto, string game3Type, ParticipantDto participant3Dto)
         {
@@ -95,6 +98,7 @@ namespace LolWPF.View.ViewModel
             Gm1Item6 = participant1Dto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant1Dto.Item6 + ".png" : ""; 
             Gm1Summoner1 = "http://ddragon.leagueoflegends.com/cdn/"+ Constants.Version + "/img/spell/"+  Enum.GetName(typeof(SummonerSpells), participant1Dto.Summoner1Id) + ".png";
             Gm1Summoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant1Dto.Summoner2Id) + ".png";
+            Gm1Role = participant1Dto.TeamPosition;
             Gm1CS = participant1Dto.TotalMinionsKilled + participant1Dto.NeutralMinionsKilled;
 
             Game2Type = game2Type;
@@ -113,6 +117,7 @@ namespace LolWPF.View.ViewModel
             Gm2Item6 = participant2Dto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant2Dto.Item6 + ".png" : "";
             Gm2Summoner1 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant2Dto.Summoner1Id) + ".png";
             Gm2Summoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant2Dto.Summoner2Id) + ".png";
+            Gm2Role = participant2Dto.TeamPosition;
             Gm2CS = participant2Dto.TotalMinionsKilled + participant2Dto.NeutralMinionsKilled;
 
             Game3Type = game3Type;
@@ -131,6 +136,7 @@ namespace LolWPF.View.ViewModel
             Gm3Item6 = participant3Dto.Item6 > 0 ? "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/item/" + participant3Dto.Item6 + ".png" : "";
             Gm3Summoner1 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant3Dto.Summoner1Id) + ".png";
             Gm3Summoner2 = "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/img/spell/" + Enum.GetName(typeof(SummonerSpells), participant3Dto.Summoner2Id) + ".png";
+            Gm3Role = participant3Dto.TeamPosition;
             Gm3CS = participant3Dto.TotalMinionsKilled + participant3Dto.NeutralMinionsKilled;
 
         }

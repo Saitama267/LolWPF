@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LolWPF.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="" Height="600" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF4F0153">
+        Title="" Height="600" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="Goldenrod">
     <Grid>
         <Border Background="White" Margin="20 100 20 20" CornerRadius="15" >
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">

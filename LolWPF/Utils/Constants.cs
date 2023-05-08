@@ -178,6 +178,7 @@ namespace LolWPF.Utils
         Yone = 777,
         Gwen = 887,
         Lillia = 876,
+        Milio = 902
     }
     enum SummonerSpells
     {

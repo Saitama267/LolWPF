@@ -25,6 +25,7 @@ namespace LolWPF.Models
         public int TotalMinionsKilled { get; set; }
         public int NeutralMinionsKilled { get; set; }
         public string Puuid { get; set; }
+        public string TeamPosition { get; set; }
         public bool Win { get; set; }
     }
 }
