@@ -141,9 +141,11 @@ namespace LolWPF.Utils
         Taliyah = 163,
         Akshan = 166,
         Camille = 164,
+        Belveth = 200,
         Braum = 201,
         Jhin = 202,
         Kindred = 203,
+        Zeri = 221,
         Jinx = 222,
         TahmKench = 223,
         Viego = 234,
@@ -178,6 +180,9 @@ namespace LolWPF.Utils
         Yone = 777,
         Gwen = 887,
         Lillia = 876,
+        Renata = 888,
+        Nilah = 895,
+        KSante = 897,
         Milio = 902
     }
     enum SummonerSpells

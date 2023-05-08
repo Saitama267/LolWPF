@@ -15,7 +15,7 @@ namespace LolWPF.Controller
         {
             var champsInfo = Constants.Champions;
             var names = GetChampionNames(champsInfo);
-            return new ViewModelRotation(names[0],names[1], names[2], names[3], names[4], names[5], names[6], names[7], names[8], names[9]);
+            return new ViewModelRotation(names);
         }
 
         private List<string> GetChampionNames(ChampionInfo championInfo)

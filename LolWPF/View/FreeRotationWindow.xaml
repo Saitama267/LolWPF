@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:LolWPF.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="" Height="550" Width="1050" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"   Background="Goldenrod" ScrollViewer.VerticalScrollBarVisibility="Visible"  >
+        Title="" Height="550" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"   Background="Goldenrod" ScrollViewer.VerticalScrollBarVisibility="Visible"  >
     <Grid >
         <StackPanel Margin="50">
             
-                <Border Background="White" Margin="0,20" CornerRadius="5" Height="450" Width="922">
+                <Border Background="White" Margin="0,20" CornerRadius="5" Height="450" Width="750">
                 <ScrollViewer>
                     <StackPanel Margin="25" >
                         <StackPanel Orientation="Horizontal">
@@ -34,13 +34,13 @@
                                     <ImageBrush ImageSource="{Binding Path=Champ4}"/>
                                 </Border.Background>
                             </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ5}"/>
                                 </Border.Background>
                             </Border>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ6}"/>
@@ -56,6 +56,8 @@
                                     <ImageBrush ImageSource="{Binding Path=Champ8}"/>
                                 </Border.Background>
                             </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ9}"/>
@@ -66,8 +68,6 @@
                                     <ImageBrush ImageSource="{Binding Path=Champ10}"/>
                                 </Border.Background>
                             </Border>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ11}"/>
@@ -78,6 +78,8 @@
                                     <ImageBrush ImageSource="{Binding Path=Champ12}"/>
                                 </Border.Background>
                             </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ13}"/>
@@ -93,31 +95,9 @@
                                     <ImageBrush ImageSource="{Binding Path=Champ15}"/>
                                 </Border.Background>
                             </Border>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
                             <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Path=Champ16}"/>
-                                </Border.Background>
-                            </Border>
-                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Champ17}"/>
-                                </Border.Background>
-                            </Border>
-                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Champ18}"/>
-                                </Border.Background>
-                            </Border>
-                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Champ19}"/>
-                                </Border.Background>
-                            </Border>
-                            <Border Width="150" Height="250" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="{Binding Path=Champ20}"/>
                                 </Border.Background>
                             </Border>
                         </StackPanel>

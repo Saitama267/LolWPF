@@ -24,10 +24,7 @@ namespace LolWPF.View.ViewModel
         public string Champ14 { get; set; }
         public string Champ15 { get; set; }
         public string Champ16 { get; set; }
-        public string Champ17 { get; set; }
-        public string Champ18 { get; set; }
-        public string Champ19 { get; set; }
-        public string Champ20 { get; set; }
+
 
         public ViewModelRotation( List<string> freeRotation)
         {
@@ -47,10 +44,7 @@ namespace LolWPF.View.ViewModel
             Champ14 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[13] + "_0.jpg";
             Champ15 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[14] + "_0.jpg";
             Champ16 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[15] + "_0.jpg";
-            Champ17 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[16] + "_0.jpg";
-            Champ18 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[17] + "_0.jpg";
-            Champ19 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[18] + "_0.jpg";
-            Champ20 = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + freeRotation[19] + "_0.jpg";
+
         }
 
     }
