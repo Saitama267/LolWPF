@@ -1,4 +1,5 @@
-﻿using LolWPF.Utils;
+﻿using LolWPF.Controller;
+using LolWPF.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace LolWPF.View
     /// </summary>
     public partial class ChampDetailsWindow : Window
     {
+        ControllerStaticChampData controller;
+        string championName;
         public ChampDetailsWindow()
         {
             InitializeComponent();
@@ -27,13 +30,25 @@ namespace LolWPF.View
             {
                 cbChampion.Items.Add(champ);
             }
+            controller = new ControllerStaticChampData();
         }
+
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
             this.Close();
             main.ShowDialog();
+        }
+
+        private void cbChampion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            championName = (sender as ComboBox).SelectedValue.ToString();
+        }
+
+        private void btnShowInfo_Click(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = controller.GetContext(championName);
         }
     }
 }

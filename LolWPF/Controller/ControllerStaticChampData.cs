@@ -21,8 +21,8 @@ namespace LolWPF.Controller
         private ChampBaseDTO GetStaticChampData(string name)
         {
             Static_Champion_Details static_Champion = new Static_Champion_Details(Constants.Region);
-            var position = static_Champion.GetStaticChampioInfo(name);
-           return position != null ? position : new ChampBaseDTO();
+            var data = static_Champion.GetStaticChampioInfo(name);
+            return data != null ? data : new ChampBaseDTO();
 
 
         }

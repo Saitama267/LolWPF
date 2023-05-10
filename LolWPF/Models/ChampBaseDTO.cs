@@ -8,6 +8,6 @@ namespace LolWPF.Models
 {
     public class ChampBaseDTO
     {
-        public ChampData Data { get; set; }
+        public Data Data { get; set; }
     }
 }

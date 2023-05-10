@@ -88,9 +88,17 @@ namespace LolWPF
 
         private void btnChampLore_Click(object sender, RoutedEventArgs e)
         {
-            ChampDetailsWindow champ = new ChampDetailsWindow();
-            this.Close();
-            champ.ShowDialog();
+            if (string.IsNullOrEmpty(viewModel.Region))
+            {
+                return;
+            }
+            if(controller.GetVersionOfGame())
+            {
+                ChampDetailsWindow champ = new ChampDetailsWindow();
+                this.Close();
+                champ.ShowDialog();
+            }
+            
         }
     }
 }

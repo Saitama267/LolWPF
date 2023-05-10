@@ -6,41 +6,49 @@
         xmlns:local="clr-namespace:LolWPF.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="ChampDetailsWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"  Background="Goldenrod" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+        Title="ChampDetailsWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None"  Background="Goldenrod" ScrollViewer.VerticalScrollBarVisibility="Visible" >
 
     <Grid >
+        
         <StackPanel Margin="30">
             <Border Background="White" Margin="10 20" CornerRadius="5" Height="450">
-                <StackPanel Margin="25">
-                    <ComboBox x:Name="cbChampion" Margin="15" Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Champions">
+            <ScrollViewer>
+                    <StackPanel Margin="25">
+                    <ComboBox x:Name="cbChampion" Margin="15" Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Champions" SelectionChanged="cbChampion_SelectionChanged" >
                     </ComboBox>
+                    
                     <StackPanel Orientation="Horizontal">
                         <Border Width="100" Height="200" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
                             <Border.Background>
                                 <ImageBrush ImageSource="{Binding Path=Icon}"/>
                             </Border.Background>
                         </Border>
-                        <StackPanel Orientation="Vertical" Margin="20 0" Width="400">
+                        <StackPanel Orientation="Vertical" Margin="20 0" Width="700">
                             <TextBlock Text="Lore" FontSize="15" FontWeight="Bold" Foreground="CadetBlue"/>
-                            <TextBlock Text="{Binding Path=Lore}" Foreground="DimGray"/>
+                            <TextBlock Text="{Binding Path=Lore}" Foreground="DimGray" Height="100" TextWrapping="Wrap"/>
                             <StackPanel Orientation="Horizontal" Margin="0 20">
-                                <StackPanel Margin="0 0 150 0" Width="150">
+                                <StackPanel Margin="0 0 100 0" Width="300">
                                     <TextBlock Text="Ally Tips:" FontSize="15" FontWeight="Bold" Foreground="Green"/>
-                                    <TextBlock Text="{Binding Path=Allytips}" Foreground="DimGray"/>
+                                    <TextBlock Text="{Binding Path=Allytips}" Foreground="DimGray" TextWrapping="Wrap"/>
                                 </StackPanel>
-                                <StackPanel Width="150">
+                                <StackPanel Width="300">
                                     <TextBlock Text="Enemy Tips:" FontSize="15" FontWeight="Bold" Foreground="Red"/>
-                                    <TextBlock Text="{Binding Path=Enemytips}" Foreground="DimGray"/>
+                                    <TextBlock Text="{Binding Path=Enemytips}" Foreground="DimGray" TextWrapping="Wrap"/>
+                                    
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
+                    
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="btnShowInfo" Margin="15 50" Content="SHOW INFO" Click="btnShowInfo_Click"/>
                         <Button x:Name="btnClose" Margin="15 50" Content="CLOSE" Click="btnClose_Click"/>
                     </StackPanel>
                 </StackPanel>
+                </ScrollViewer>
             </Border>
 
         </StackPanel>
+        
     </Grid>
 </Window>
