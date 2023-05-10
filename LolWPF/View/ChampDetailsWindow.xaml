@@ -10,11 +10,31 @@
 
     <Grid >
         <StackPanel Margin="30">
-            <Border Background="White" Margin="10 20" CornerRadius="5" Height="274">
+            <Border Background="White" Margin="10 20" CornerRadius="5" Height="450">
                 <StackPanel Margin="25">
                     <ComboBox x:Name="cbChampion" Margin="15" Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Champions">
                     </ComboBox>
-                    
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="100" Height="200" Margin="20 20 0 10" HorizontalAlignment="Left" BorderBrush="Gray"  BorderThickness="1" CornerRadius="15">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding Path=Icon}"/>
+                            </Border.Background>
+                        </Border>
+                        <StackPanel Orientation="Vertical" Margin="20 0" Width="400">
+                            <TextBlock Text="Lore" FontSize="15" FontWeight="Bold" Foreground="CadetBlue"/>
+                            <TextBlock Text="{Binding Path=Lore}" Foreground="DimGray"/>
+                            <StackPanel Orientation="Horizontal" Margin="0 20">
+                                <StackPanel Margin="0 0 150 0" Width="150">
+                                    <TextBlock Text="Ally Tips:" FontSize="15" FontWeight="Bold" Foreground="Green"/>
+                                    <TextBlock Text="{Binding Path=Allytips}" Foreground="DimGray"/>
+                                </StackPanel>
+                                <StackPanel Width="150">
+                                    <TextBlock Text="Enemy Tips:" FontSize="15" FontWeight="Bold" Foreground="Red"/>
+                                    <TextBlock Text="{Binding Path=Enemytips}" Foreground="DimGray"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="btnClose" Margin="15 50" Content="CLOSE" Click="btnClose_Click"/>
                     </StackPanel>

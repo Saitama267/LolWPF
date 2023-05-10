@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using LolWPF.Models;
+using LolWPF.Utils;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace LolWPF.API
 {
-    public class Game_Version : Api
+    public class Static_Champion_Details : Api
     {
-        public Game_Version(string region) : base(region)
+        public Static_Champion_Details(string region):base(region)
         {
         }
 
-        public List<string> GetVersion()
+        public ChampBaseDTO  GetStaticChampioInfo(string champName)
         {
-            var response = GET(GetURI(""));
+            var response = GET(GetURI(champName));
             string content = response.Content.ReadAsStringAsync().Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<List<string>>(content);
+                return JsonConvert.DeserializeObject<ChampBaseDTO>(content);
             }
             else
             {
@@ -28,8 +30,7 @@ namespace LolWPF.API
         }
         protected override string GetURI(string path)
         {
-            return "https://ddragon.leagueoflegends.com/api/versions.json";
+            return "http://ddragon.leagueoflegends.com/cdn/" + Constants.Version + "/data/en_US/champion/" + path + ".json";
         }
-        
     }
 }

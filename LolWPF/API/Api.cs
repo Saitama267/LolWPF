@@ -39,9 +39,6 @@ namespace LolWPF.API
             StreamReader sr = new StreamReader(path);
             return sr.ReadToEnd();
         }
-        protected string GetLatestVersion()
-        {
-            return "https://ddragon.leagueoflegends.com/api/versions.json";
-        }
+        
     }
 }
