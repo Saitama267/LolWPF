@@ -16,15 +16,14 @@ using System.Windows.Shapes;
 namespace LolWPF.View
 {
     /// <summary>
-    /// Interaction logic for WindowProfile.xaml
+    /// Interaction logic for FreeRotationWindow.xaml
     /// </summary>
-    public partial class WindowProfile : Window
+    public partial class FreeRotationWindow : Window
     {
-        ControllerProfile controller;
-        public WindowProfile()
+        public FreeRotationWindow()
         {
+            ControllerRotation controller = new ControllerRotation();
             InitializeComponent();
-            controller = new ControllerProfile();
             this.DataContext = controller.GetContext();
 
         }
@@ -34,13 +33,6 @@ namespace LolWPF.View
             MainWindow main = new MainWindow();
             this.Close();
             main.ShowDialog();
-            
-        }
-
-        private void btnDetails_Click(object sender, RoutedEventArgs e)
-        {
-            WindowProfile2 windowProfile2 = new WindowProfile2();
-            windowProfile2.ShowDialog();
         }
     }
 }

@@ -16,31 +16,22 @@ using System.Windows.Shapes;
 namespace LolWPF.View
 {
     /// <summary>
-    /// Interaction logic for WindowProfile.xaml
+    /// Interaction logic for WindowProfile2.xaml
     /// </summary>
-    public partial class WindowProfile : Window
+    public partial class WindowProfile2 : Window
     {
-        ControllerProfile controller;
-        public WindowProfile()
+        ControllerProfile2 controller;
+        public WindowProfile2()
         {
             InitializeComponent();
-            controller = new ControllerProfile();
+            controller = new ControllerProfile2();
             this.DataContext = controller.GetContext();
-
         }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
             this.Close();
-            main.ShowDialog();
             
         }
 
-        private void btnDetails_Click(object sender, RoutedEventArgs e)
-        {
-            WindowProfile2 windowProfile2 = new WindowProfile2();
-            windowProfile2.ShowDialog();
-        }
     }
 }
