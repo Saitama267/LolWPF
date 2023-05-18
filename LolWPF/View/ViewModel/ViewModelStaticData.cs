@@ -1,4 +1,5 @@
 ﻿using LolWPF.Models;
+using LolWPF.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,21 @@ namespace LolWPF.View.ViewModel
         public string Allytips { get; set; }
         public string Enemytips { get; set; }
 
-        public ViewModelStaticData(ChampBaseDTO data)
+        public ViewModelStaticData(Dictionary<string, Dictionary<string, ChampData>> data)
         {
-            Icon = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + data.Data.Galio.Name + "_0.jpg";
-            Lore = data.Data.Galio.Lore;
-            Allytips = $"{data.Data.Galio.Allytips[0]}\n{data.Data.Galio.Allytips[1]}\n{data.Data.Galio.Allytips[2]}";
-            Enemytips = $"{data.Data.Galio.Enemytips[0]}\n{data.Data.Galio.Enemytips[1]}\n{data.Data.Galio.Enemytips[2]}";
+            Dictionary<string, ChampData> champ = data["data"];
+            Icon = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + Constants.ChampName + "_0.jpg";
+            Lore = champ[$"{Constants.ChampName}"].Lore;
+            foreach (var item in champ[$"{Constants.ChampName}"].Allytips)
+            {
+                Allytips += $"{item}\n";
+            }
+            foreach (var item in champ[$"{Constants.ChampName}"].Enemytips)
+            {
+                Enemytips += $"{item}\n";
+            }
+            //Allytips = $"{champ[$"{Constants.ChampName}"].Allytips[0]}\n{champ[$"{Constants.ChampName}"].Allytips[1]}\n{champ[$"{Constants.ChampName}"].Allytips[2]}";
+            //Enemytips = $"{champ[$"{Constants.ChampName}"].Enemytips[0]}\n{champ[$"{Constants.ChampName}"].Enemytips[1]}\n{champ[$"{Constants.ChampName}"].Enemytips[2]}";
         }
     }
 }

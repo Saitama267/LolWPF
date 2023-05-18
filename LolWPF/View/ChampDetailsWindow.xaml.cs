@@ -48,6 +48,7 @@ namespace LolWPF.View
 
         private void btnShowInfo_Click(object sender, RoutedEventArgs e)
         {
+            Constants.ChampName = championName;
             this.DataContext = controller.GetContext(championName);
         }
     }

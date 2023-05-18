@@ -12,6 +12,7 @@ namespace LolWPF.Utils
         public static SummonerDTO Summoner { get; set; }
         public static PositionDTO Position { get; set; }
         public static ChampionInfo Champions { get; set; }
+        public static string ChampName { get; set; }
         public static string Region { get; set; }
 
         public static string Version { get; set; }
