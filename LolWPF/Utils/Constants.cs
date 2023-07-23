@@ -19,7 +19,6 @@ namespace LolWPF.Utils
     }
     enum Champs
     {
-        Mikki=0,
         Annie = 1,
         Olaf = 2,
         Galio = 3,
@@ -182,7 +181,8 @@ namespace LolWPF.Utils
         Renata = 888,
         Nilah = 895,
         KSante = 897,
-        Milio = 902
+        Milio = 902,
+        Naafiri=950
     }
     enum SummonerSpells
     {
