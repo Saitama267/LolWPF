@@ -181,7 +181,8 @@ namespace LolWPF.Utils
         Renata = 888,
         Nilah = 895,
         KSante = 897,
-        Milio = 902
+        Milio = 902,
+        Naafiri=950
     }
     enum SummonerSpells
     {
