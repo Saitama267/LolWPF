@@ -214,10 +214,8 @@
     <Compile Include="Controller\ControllerProfile2.cs" />
     <Compile Include="Controller\ControllerRotation.cs" />
     <Compile Include="Controller\ControllerStaticChampData.cs" />
-    <Compile Include="Models\ChampBaseDTO.cs" />
     <Compile Include="Models\ChampData.cs" />
     <Compile Include="Models\ChampionInfo.cs" />
-    <Compile Include="Models\Data.cs" />
     <Compile Include="Models\InfoDTO.cs" />
     <Compile Include="Models\MatchDto.cs" />
     <Compile Include="Models\ParticipantDto.cs" />
