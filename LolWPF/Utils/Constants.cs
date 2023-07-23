@@ -19,6 +19,7 @@ namespace LolWPF.Utils
     }
     enum Champs
     {
+        Mikki=0,
         Annie = 1,
         Olaf = 2,
         Galio = 3,
