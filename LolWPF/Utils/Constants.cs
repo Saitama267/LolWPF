@@ -12,11 +12,9 @@ namespace LolWPF.Utils
         public static SummonerDTO Summoner { get; set; }
         public static PositionDTO Position { get; set; }
         public static ChampionInfo Champions { get; set; }
+        public static string ChampName { get; set; }
         public static string Region { get; set; }
-
         public static string Version { get; set; }
-
-       
 
     }
     enum Champs
@@ -27,7 +25,7 @@ namespace LolWPF.Utils
         TwistedFate = 4,
         XinZhao = 5,
         Urgot = 6,
-        LeBlanc = 7,
+        Leblanc = 7,
         Vladimir = 8,
         Fiddlesticks = 9,
         Kayle = 10,

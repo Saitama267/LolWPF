@@ -18,11 +18,11 @@ namespace LolWPF.Controller
             return new ViewModelStaticData(champ);
         }
 
-        private ChampBaseDTO GetStaticChampData(string name)
+        private Dictionary<string,Dictionary<string,ChampData>> GetStaticChampData(string name)
         {
             Static_Champion_Details static_Champion = new Static_Champion_Details(Constants.Region);
             var data = static_Champion.GetStaticChampioInfo(name);
-            return data != null ? data : new ChampBaseDTO();
+            return data != null ? data : new Dictionary<string, Dictionary<string, ChampData>>();
 
 
         }

@@ -15,13 +15,16 @@ namespace LolWPF.API
         {
         }
 
-        public ChampBaseDTO  GetStaticChampioInfo(string champName)
+        public Dictionary<string, Dictionary<string, ChampData>> GetStaticChampioInfo(string champName)
         {
             var response = GET(GetURI(champName));
             string content = response.Content.ReadAsStringAsync().Result;
+            var text = content.Split(new char[] { ',' }, 5);
+            var c = "{"+text[3]+"," + text[4] ;
+
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<ChampBaseDTO>(content);
+                return JsonConvert.DeserializeObject<Dictionary<string,Dictionary<string,ChampData>>>(c);
             }
             else
             {
