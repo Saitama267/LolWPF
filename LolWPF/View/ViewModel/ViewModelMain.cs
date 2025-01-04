@@ -28,6 +28,12 @@ namespace LolWPF.View.ViewModel
             set { summonerName = value; NotifyPropertyChanged("SummonerName"); }
         }
 
+        string tag;
+        public string Tag
+        {
+            get { return tag; }
+            set { tag = value; NotifyPropertyChanged("Tag"); }
+        }
 
         private void NotifyPropertyChanged(string info)
         {

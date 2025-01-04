@@ -28,8 +28,6 @@ namespace LolWPF.View.ViewModel
             {
                 Enemytips += $"{item}\n";
             }
-            //Allytips = $"{champ[$"{Constants.ChampName}"].Allytips[0]}\n{champ[$"{Constants.ChampName}"].Allytips[1]}\n{champ[$"{Constants.ChampName}"].Allytips[2]}";
-            //Enemytips = $"{champ[$"{Constants.ChampName}"].Enemytips[0]}\n{champ[$"{Constants.ChampName}"].Enemytips[1]}\n{champ[$"{Constants.ChampName}"].Enemytips[2]}";
         }
     }
 }

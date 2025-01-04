@@ -11,10 +11,12 @@ namespace LolWPF.Controller
 {
     class ControllerMain
     {
-        public bool GetSummoner( string summonerName)
+        public bool GetSummoner( string summonerName, string tag)
         {
+            Account_V1 account_V1 = new Account_V1(Constants.Region);
+            var account = account_V1.GetAccount(summonerName, tag);
             Summoner_V4 summoner_V4 = new Summoner_V4(Constants.Region);
-            var summoner = summoner_V4.GetSummonerByName(summonerName);
+            var summoner = summoner_V4.GetSummonerByPuuid(account.Puuid);
 
             Constants.Summoner = summoner;
 

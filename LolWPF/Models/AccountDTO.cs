@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace LolWPF.Models
 {
-    public class ChampBaseDTO
+    public class AccountDTO
     {
-        public Data Data { get; set; }
+        public string Puuid { get; set; }
+        public string GameName { get; set; }
+        public string TagLine { get; set; }
     }
 }

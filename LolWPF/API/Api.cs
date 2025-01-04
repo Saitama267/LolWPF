@@ -32,7 +32,8 @@ namespace LolWPF.API
         }
         protected virtual string GetURI(string path)
         {
-            return "https://" + Region + ".api.riotgames.com/lol/" + path + "?api_key=" + Key;
+            string uri = "https://" + Region + ".api.riotgames.com/lol/" + path + "?api_key=" + Key;
+            return uri;
         }
         public string GetKey(string path)
         {

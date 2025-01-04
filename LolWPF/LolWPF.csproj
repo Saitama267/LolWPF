@@ -205,6 +205,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="API\Account_V1.cs" />
     <Compile Include="API\Champion_V3.cs" />
     <Compile Include="API\Game_Version.cs" />
     <Compile Include="API\League_V4.cs" />
@@ -214,10 +215,9 @@
     <Compile Include="Controller\ControllerProfile2.cs" />
     <Compile Include="Controller\ControllerRotation.cs" />
     <Compile Include="Controller\ControllerStaticChampData.cs" />
-    <Compile Include="Models\ChampBaseDTO.cs" />
+    <Compile Include="Models\AccountDTO.cs" />
     <Compile Include="Models\ChampData.cs" />
     <Compile Include="Models\ChampionInfo.cs" />
-    <Compile Include="Models\Data.cs" />
     <Compile Include="Models\InfoDTO.cs" />
     <Compile Include="Models\MatchDto.cs" />
     <Compile Include="Models\ParticipantDto.cs" />

@@ -50,7 +50,11 @@ namespace LolWPF
             {
                 return;
             }
-            if (controller.GetSummoner(viewModel.SummonerName) && controller.GetVersionOfGame())
+            if (string.IsNullOrEmpty(viewModel.Tag))
+            {
+                return;
+            }
+            if (controller.GetSummoner(viewModel.SummonerName, viewModel.Tag) && controller.GetVersionOfGame())
             {
                 WindowProfile profile = new WindowProfile();
                 this.Close();
